@@ -220,7 +220,7 @@ function RateTable(props: {
   );
 }
 
-function OverheadTablefunction OverheadTable(props: {
+function OverheadTable(props: {
   rows: { key: string; name: string; unit: "rate" | "yen"; value: number }[];
   onChange: (key: string, value: number) => void;
 }) {
