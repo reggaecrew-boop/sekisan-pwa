@@ -13,6 +13,9 @@ export async function createEstimate(initialRateSet: RateSetRef): Promise<Estima
     createdAt: t,
     updatedAt: t,
     rateSetRef: initialRateSet,
+    workTypes: [{ id: crypto.randomUUID(), name: "共通", order: 0 }],
+    lines: [],
+    overhead: { mode: "rate", rate: 0 },
   };
   await db.estimates.put(est);
   return est;
