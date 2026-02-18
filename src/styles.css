@@ -16,3 +16,8 @@ a{color:inherit}
 .tab{border:1px solid #ddd;padding:6px 10px;border-radius:999px;background:#fff}
 .tab.active{border-color:#111;background:#111;color:#fff}
 .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+
+.grid2{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:860px){.grid2{grid-template-columns:320px 1fr}}
+.hr{height:1px;background:#eee;margin:10px 0}
+.btn.active{border-color:#111;background:#111;color:#fff}
