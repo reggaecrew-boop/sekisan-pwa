@@ -2,45 +2,36 @@ import type { BaseRateSet, RateSetData } from "../types";
 
 const YEAR = 2026 as const;
 const baseData: RateSetData = {
-  "labor": {
-    "SURVEYOR": {
-      "name": "測量士",
-      "unit": "person_day",
-      "unitPriceYen": 28000
-    }
+  labor: {
+    "LAB_CHIEF": { "name": "主任（例）", "unit": "person_day", "unitPriceYen": 26000 },
+    "LAB_SURVEYOR": { "name": "測量士", "unit": "person_day", "unitPriceYen": 28000 },
+    "LAB_ASSIST_SURVEYOR": { "name": "測量士補", "unit": "person_day", "unitPriceYen": 24000 },
+    "LAB_HELPER": { "name": "助手", "unit": "person_day", "unitPriceYen": 20000 },
+    "LAB_DRIVER": { "name": "運転手", "unit": "person_day", "unitPriceYen": 22000 },
+    "LAB_OFFICE": { "name": "内業（一般）", "unit": "person_day", "unitPriceYen": 21000 },
+    "LAB_CAD": { "name": "製図/CAD", "unit": "person_day", "unitPriceYen": 23000 },
+    "LAB_SECURITY": { "name": "交通誘導員/警備（例）", "unit": "person_day", "unitPriceYen": 19000 },
   },
-  "equipment": {
-    "TS": {
-      "name": "トータルステーション",
-      "unit": "day",
-      "unitPriceYen": 4500
-    }
+  equipment: {
+    "TS": { "name": "トータルステーション", "unit": "day", "unitPriceYen": 4500 },
+    "GNSS": { "name": "GNSS受信機", "unit": "day", "unitPriceYen": 6000 },
+    "LEVEL": { "name": "レベル", "unit": "day", "unitPriceYen": 2500 },
+    "UAV": { "name": "UAV/ドローン（例）", "unit": "day", "unitPriceYen": 8000 },
+    "VEHICLE": { "name": "車両（例）", "unit": "day", "unitPriceYen": 7000 },
   },
-  "consumables": {
-    "SPRAY": {
-      "name": "マーキングスプレー",
-      "unit": "can",
-      "unitPriceYen": 600
-    }
+  consumables: {
+    "SPRAY": { "name": "マーキングスプレー", "unit": "can", "unitPriceYen": 600 },
+    "STAKE": { "name": "杭（例）", "unit": "piece", "unitPriceYen": 120 },
+    "NAIL": { "name": "鋲/釘（例）", "unit": "piece", "unitPriceYen": 50 },
+    "BATTERY": { "name": "電池（例）", "unit": "piece", "unitPriceYen": 300 },
+    "TAPE": { "name": "テープ（例）", "unit": "piece", "unitPriceYen": 200 },
   },
-  "overhead": {
-    "overhead.rate": {
-      "name": "現場管理費率（例）",
-      "unit": "rate",
-      "value": 0.25
-    },
-    "general_admin.rate": {
-      "name": "一般管理費率（例）",
-      "unit": "rate",
-      "value": 0.1
-    },
-    "tax.rate": {
-      "name": "消費税率（例）",
-      "unit": "rate",
-      "value": 0.1
-    }
+  overhead: {
+    "overhead.rate": { "name": "現場管理費率（例）", "unit": "rate", "value": 0.25 },
+    "general_admin.rate": { "name": "一般管理費率（例）", "unit": "rate", "value": 0.1 },
+    "tax.rate": { "name": "消費税率（例）", "unit": "rate", "value": 0.1 }
   }
-} as any;
+};
 
 function clone<T>(x: T): T { return structuredClone(x); }
 
